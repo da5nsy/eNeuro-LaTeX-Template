@@ -1,0 +1,46 @@
+% packages - in LaTeX pretty much everything is done with a different package
+\usepackage[margin=0.6in]{geometry} %set paper size and margins
+\usepackage{setspace} % for setting line height 
+\usepackage[utf8]{inputenc} % input encoding
+\usepackage[english]{babel} % language options
+\usepackage[T1]{fontenc} % font encoding
+\usepackage{helvet} % for helvetica font
+\usepackage{graphicx} %for images
+\usepackage[round]{natbib} % for references
+\usepackage{blindtext} % for filler text (remove later)
+\usepackage{hyperref} % for cross references
+\usepackage{microtype} % for micro-typographic enhancements
+\usepackage{xcolor} % for defining colours
+\usepackage{doi} % makes dois linkable in references
+\usepackage{mwe} % adds placeholder images
+
+\renewcommand*\familydefault{\sfdefault} %sets font
+%\setstretch{2} %sets line height, might be required for submission
+\setlength{\columnsep}{0.2in}
+
+% increases size, and changes colour, of title
+\definecolor{titleblue}{RGB}{0, 90, 156} %color-pickered from a publication
+
+
+\makeatletter
+
+\renewcommand*\maketitle{%
+    \twocolumn[
+    \begin{@twocolumnfalse}
+    \begingroup
+    \centering
+    \fontsize{24}{26}% 72pt on 80pt leading
+    \fontseries{Medium}
+    \raggedright
+    \selectfont
+    \color{titleblue}
+    \@title
+    \par
+    \vskip0.6in
+    \endgroup
+    \end{@twocolumnfalse}]
+}
+                                
+\makeatother
+
+

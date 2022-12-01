@@ -1,0 +1,50 @@
+% eNeuro formatting reference:
+%
+% https://www.eneuro.org/content/preparing-manuscript
+
+% Eneuro guidelines:
+%
+% https://www.eneuro.org/sites/default/files/eNeuro%20Registered%20Reports%20Author%20Guidelines.pdf
+%
+% Initial  submissions  will  include  a description of the key research question and background literature, hypotheses, experimental procedures, analysis pipeline,   a   statistical   power   analysis   (or   Bayesian equivalent), and pilot data (where applicable).
+
+%% PREAMBLE
+
+%\documentclass{article}
+\documentclass[twocolumn]{article}
+\input{setup} % where all the gubbins are stored
+
+
+%% INFO
+
+\title{The title}
+\author{}
+\date{}
+
+
+%% DOCUMENT
+
+\begin{document}
+
+\maketitle
+
+%\input{Introduction}
+%\input{Material and Methods}
+
+\blinddocument
+
+I'd like to test the first type of referencing \citep{adams1995hitchhiker}. In addition \citet{adams1995hitchhiker} said some similar things as shown in this second type of referencing. 
+
+In Figure \ref{fig:universe} you can see that the universe is very big.
+
+\begin{figure*}[t]
+  \centering
+  \includegraphics[width=\textwidth]{example-image-a}
+  \caption{\blindtext}
+  \label{fig:universe}
+\end{figure*}
+
+\bibliographystyle{plainnat} %this style is not quite right. Need to tweak at some point.
+\bibliography{bib.bib}
+
+\end{document}
